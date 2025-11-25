@@ -35,6 +35,7 @@ const rowData: Data[] = [
 
   { id: 7, parent: 4, label: 'Айтем 7' },
   { id: 8, parent: 4, label: 'Айтем 8' },
+  { id: 9, parent: 1, label: 'Айтем 9' },
 ]
 
 const defaultColDef = {
@@ -46,7 +47,9 @@ const statusBar = {}
 const treeStoreInstans = new TreeStore(rowData)
 console.log(treeStoreInstans.getAll())
 console.log(treeStoreInstans.getItem(5))
-console.log(treeStoreInstans.getChildren(4))
+console.log(treeStoreInstans.getChildren(1))
+console.log(treeStoreInstans.getAllChildren(1))
+console.log(treeStoreInstans.getAllParents(8))
 </script>
 
 <style scoped></style>
