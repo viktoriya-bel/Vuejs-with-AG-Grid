@@ -14,6 +14,7 @@ import { AgGridVue } from 'ag-grid-vue3'
 
 import { AllEnterpriseModule, ColDef, LicenseManager, ModuleRegistry } from 'ag-grid-enterprise'
 import { Data } from './type'
+import { TreeStore } from './TreeStore'
 ModuleRegistry.registerModules([AllEnterpriseModule])
 LicenseManager.setLicenseKey('<your license key>')
 
@@ -41,6 +42,11 @@ const defaultColDef = {
 }
 
 const statusBar = {}
+
+const treeStoreInstans = new TreeStore(rowData)
+console.log(treeStoreInstans.getAll())
+console.log(treeStoreInstans.getItem(5))
+console.log(treeStoreInstans.getChildren(4))
 </script>
 
 <style scoped></style>
